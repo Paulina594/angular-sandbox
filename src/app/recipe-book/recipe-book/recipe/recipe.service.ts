@@ -73,6 +73,10 @@ export class RecipeService {
     return this.recipes.slice();
   }
 
+  getRecipe(index: number): RecipeModel | null {
+    return this.recipes[index];
+  }
+
   addIngredientsToShoppingList(ingredients: IngredientModel[]) {
     this.shoppingListService.addIngredients(ingredients);
   }

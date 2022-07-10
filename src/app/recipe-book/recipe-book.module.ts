@@ -6,6 +6,9 @@ import { RecipeItemComponent } from './recipe-book/recipe-list/recipe-item/recip
 import { RecipeDetailComponent } from './recipe-book/recipe-detail/recipe-detail.component';
 import { SharedModule } from '../shared/shared.module';
 import { RecipeService } from './recipe-book/recipe/recipe.service';
+import {AppRouterModule} from "../app-router.module";
+import { RecipeStartComponent } from './recipe-book/recipe-start/recipe-start.component';
+import { RecipeEditComponent } from './recipe-book/recipe-edit/recipe-edit.component';
 
 @NgModule({
   declarations: [
@@ -13,8 +16,10 @@ import { RecipeService } from './recipe-book/recipe/recipe.service';
     RecipeListComponent,
     RecipeItemComponent,
     RecipeDetailComponent,
+    RecipeStartComponent,
+    RecipeEditComponent,
   ],
-  imports: [CommonModule, SharedModule],
+  imports: [CommonModule, SharedModule, AppRouterModule],
   exports: [RecipeBookComponent],
   providers: [RecipeService],
 })
